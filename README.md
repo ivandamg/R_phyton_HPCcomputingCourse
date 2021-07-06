@@ -196,7 +196,7 @@ bleedingedge_R.def file:
     singularity run ~/Bleeding_edge_R.sif Rscript ~/DCSR-Examples/python_r/chisq.R
 
 
-# Conclusion
+# Slides will come...
 
 
 
