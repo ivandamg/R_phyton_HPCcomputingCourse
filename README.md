@@ -21,20 +21,21 @@
 
 
 
-1. load R with the software stack
+       
+        1. load R with the software stack
 
-module load gcc r
-R
+        module load gcc r
+        R
 
-(in batch mode) : Rscript
+        (in batch mode) : Rscript
 
 2. install packages. 
  
-a. As usuall in R: install.packages("ggplot")
+        a. As usuall in R: install.packages("ggplot")
 
-b. install from github:
-install devtools 
-from github:  intall_github("bala/blabla")
+        b. install from github:
+       install devtools 
+       from github:  intall_github("bala/blabla")
 
 
 3. Example create a slurm script to run the job
@@ -62,67 +63,66 @@ export OMP_NUM_THREADS=x
 
 # PYTHON
 
-0. load module
-module load gcc python
+      0. load module
+      module load gcc python
+      
+      install python apps better in virtual environments!!!!
 
-install python apps better in virtual environments!!!!
+      1. system wide app (non recommended on laptop)
 
-1. system wide app (non recommended on laptop)
+      pip install package name
+      or
+      python3 setup.py install
 
-pip install package name
-or
-python3 setup.py install
+      --user # to install in the user folder
 
---user # to install in the user folder
+      packages installed in
 
-packages installed in
+      BEST WAY TO INSTALL PACKAGES. IN Virtual environment
 
-BEST WAY TO INSTALL PACKAGES. IN Virtual environment
+      create virtual environment
+      python3 -m venv $PATH_TO_VENV
 
-create virtual environment
-python3 -m venv $PATH_TO_VENV
+      # best way to install packages
+      $PATH_TO_VENV/bin/python setup.py install
 
-# best way to install packages
-$PATH_TO_VENV/bin/python setup.py install
+      module load gcc python
+      pip3.8 install numpy==1.20.1 --user
 
-module load gcc python
-pip3.8 install numpy==1.20.1 --user
-
-if installin new version of library pip remove other version of same packages
-
-
-
-ex. networkx lib
-
-pip list | grep -i networkx
-
-in python
-import networkx 
-
-source $path_to_venv/bin/python
+      if installin new version of library pip remove other version of same packages
 
 
-i
-0. load python
-     module load gcc python
-1. Create virtual environment
 
-mkdir new_evn
-python3 -m venv /work/FAC/FBM/DEE/isanders/popgen_to_var/IM/new_evn
+     ex. networkx lib
 
-2. Activate virtual env
+     pip list | grep -i networkx
 
-source torch /work/FAC/FBM/DEE/isanders/popgen_to_var/IM/new_evn activate
+     in python
+     import networkx 
 
-3. install library in venv
+     source $path_to_venv/bin/python
 
-pip install torch
+Example:
+     0. load python
+          module load gcc python
+     1. Create virtual environment
 
-4. Run script with files
-python PyTorch.py
+     mkdir new_evn
+     python3 -m venv /work/FAC/FBM/DEE/isanders/popgen_to_var/IM/new_evn
 
-5. deactivate 
-deactivate
+     2. Activate virtual env
+
+     source torch /work/FAC/FBM/DEE/isanders/popgen_to_var/IM/new_evn activate
+
+     3. install library in venv
+
+     pip install torch
+
+     4. Run script with files
+     python PyTorch.py
+
+     5. deactivate 
+     deactivate
 
 
 
@@ -195,6 +195,8 @@ bleedingedge_R.def file:
 
     singularity run ~/Bleeding_edge_R.sif Rscript ~/DCSR-Examples/python_r/chisq.R
 
+
+# Conclusion
 
 
 
