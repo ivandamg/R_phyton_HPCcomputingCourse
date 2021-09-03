@@ -112,7 +112,7 @@ Example:
 
      2. Activate virtual env
 
-     source torch /work/FAC/FBM/DEE/isanders/popgen_to_var/IM/new_evn activate
+     source /work/FAC/FBM/DEE/isanders/popgen_to_var/IM/bin/activate
 
      3. install library in venv
 
