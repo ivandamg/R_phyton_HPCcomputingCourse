@@ -3,6 +3,16 @@
  
  
  
+ # important
+ 
+ 
+ See list of modules
+ 
+ 
+ module load gcc [tab]
+ 
+ 
+ 
  # Objectives
  1. How to install python/r applications on clusters
  
