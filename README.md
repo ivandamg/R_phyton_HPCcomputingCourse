@@ -11,6 +11,9 @@
  
  module load gcc [tab]
  
+ # Run jobs interactively
+ 
+      Sinteractive -c 16 -m 128G -t 02:00:00
  
  
  # Objectives
